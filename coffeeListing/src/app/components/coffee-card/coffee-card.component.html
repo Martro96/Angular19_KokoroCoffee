@@ -1,0 +1,43 @@
+<article class="product-container">
+  <div 
+    class="coffe-item" 
+    [ngClass]="{
+      'on-sale': coffe.available,
+      'out-of-stock': !coffe.available
+    }"
+  >
+    <div class="title">
+      <h3 class="coffe-name">{{ coffe.name }}</h3>
+    </div>
+
+    <div class="img-coffe">
+      <img 
+        [src]="coffe.imageUrl | defaultImage" 
+        alt="{{ coffe.name }}" 
+        (click)="navigateToDetail()" 
+        class="coffe-img"
+        (error)="coffe.imageUrl = 'assets/default-image.jpg'" 
+      />
+    </div>
+
+    <div class="price">
+      <p>Price: {{ coffe.price }}</p>
+    </div>
+
+    <!-- Comentaré esta parte hasta que la necesites -->
+    <!--
+    <div class="actions">
+      <div class="article-item-quantity" *ngIf="coffe.available">
+        <button (click)="decreaseQuantity()" [disabled]="coffe.quantityInCart <= 0">-</button>
+        <span>{{ coffe.quantityInCart }}</span>
+        <button (click)="increaseQuantity()">+</button>
+      </div>
+
+      <div class="article-item-actions">
+        <button *ngIf="!coffe.available" (click)="addToCart()">Agregar al carrito</button>
+        <button *ngIf="coffe.available" (click)="addToCart()">Agregar al carrito (Oferta)</button>
+      </div>
+    </div>
+    -->
+  </div>
+</article>

@@ -1,0 +1,9 @@
+<h2>Our products</h2>
+<div class="products-container">
+  <app-coffee-card
+  *ngFor="let coffe of coffees$ | async; trackBy: trackById"
+  [coffe]="coffe"
+  >
+  <!-- aquí podríamos añadir los métodos para añadir al carrito, aumentar y disminuir cantidad
+   (quantityChange)="onQuantityChange($event)" -->
+</app-coffee-card>

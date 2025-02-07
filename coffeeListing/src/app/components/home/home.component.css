@@ -1,0 +1,56 @@
+* {
+    background-color: transparent;
+}
+.header-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    height: 90vh;
+}
+.coffee-logo {
+    width: 50%;
+    height: auto;
+}
+
+.header-home h1 {
+    font-size: 32px;
+    width: 100%;
+    text-align: center;
+}
+.header-home h2 {
+    font-size: 20px;
+    width: 50%;
+    text-align: center;
+}
+
+.kokoro_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+     background-color: black;
+    color: whitesmoke;
+}
+
+.kokoro_info h2 {
+    font-size: 40px;
+    margin: 50px;
+    text-align: center;
+}
+
+.kokoro_info p {
+    font-size: 24px;
+    text-align: start;
+    width: 60%;
+    margin-bottom: 30px;
+
+}
+.img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    object-fit: cover;
+}
